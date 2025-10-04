@@ -21,10 +21,9 @@ nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     background-color: rgb(200, 179, 153);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     align-items: center;
     border-bottom: 2px solid rgb(150, 130, 100);
-    margin-bottom: 20px;
 }
 
 
@@ -83,6 +82,59 @@ nav, #nav-links {
     font-weight: bold;
     color: rgb(105, 89, 64);
 }
+
+/* 
+    Adds padding around the main content of 20px.
+*/
+main {
+    padding: 20px;
+}
+
+/* 
+    Centers the heading text.
+    Increases font size to 28px.
+*/
+#about > h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+/* 
+    Using display flex
+    Gap is set to 20px
+*/
+.about-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* 
+    Width is set to 50% of parent
+    Font size is 24px
+    Text-align is justified
+*/
+.about-text {
+    width: 50%;
+    font-size: 24px;
+    text-align: justify;
+}
+
+/* 
+    Image width is half of the parent minus 40 px for the gap
+    Border radius 10px
+    Added a box shadow
+*/
+.einstein-tongue-out-image {
+    width: 50%;
+    height: auto;
+    display: block;  
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
 
 
 /* 
