@@ -16,11 +16,11 @@ nav {
     margin-bottom: 20px;
 }
 
-nav, nav > ul  {
+nav, #nav-links {
     display: flex;
 }
 
-nav > ul {
+#nav-links {
     list-style: none;
     margin: 0;
     gap: 20px;
@@ -35,4 +35,38 @@ nav > ul {
 
 .header-links:hover {
     color: rgb(66, 48, 14);
+}
+
+#hamburger-checkbox {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#hamburger {
+    display: none;
+    font-weight: bold;
+    color: rgb(105, 89, 64);
+}
+
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: rgb(200, 179, 153);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        font-size: 18px;
+    }
+
+    #hamburger {
+        display: block;
+    }
 }
