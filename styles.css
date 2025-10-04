@@ -1,13 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: burlywood;
+    background-color: rgb(230, 216, 199);
 }
 
 nav {
     justify-content: space-between;
     padding: 20px;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    background-color: rgb(200, 179, 153);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border-bottom: 2px solid rgb(150, 130, 100);
+    margin-bottom: 20px;
 }
 
 nav, nav > ul  {
@@ -17,5 +23,16 @@ nav, nav > ul  {
 nav > ul {
     list-style: none;
     margin: 0;
-    gap: 10px;
+    gap: 20px;
+}
+
+.header-links {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(105, 89, 64);
+    transition: color 0.35s;
+}
+
+.header-links:hover {
+    color: rgb(66, 48, 14);
 }
