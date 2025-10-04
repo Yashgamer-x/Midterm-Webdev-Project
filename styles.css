@@ -1,9 +1,20 @@
+/* 
+    Removed all the margins and padding for body.
+    Changed background to a light beige color.
+ */
 body{
     margin: 0;
     padding: 0;
     background-color: rgb(230, 216, 199);
 }
 
+
+/* 
+    Added spacing between the Alber Einstein text and the navigation links.
+    Changed font to Verdana, Geneva, Tahoma, sans-serif for a cleaner look.
+    Increased font size to 24px.
+    Changed background color to a light brown.
+*/
 nav {
     justify-content: space-between;
     padding: 20px;
@@ -16,16 +27,31 @@ nav {
     margin-bottom: 20px;
 }
 
+
+/* 
+    Using flex for navigation bar and navigation links for better alignment.
+*/
 nav, #nav-links {
     display: flex;
 }
 
+/* 
+    Removed bullet points
+    Removed default margin
+    Added gap between links for better spacing
+*/
 #nav-links {
     list-style: none;
     margin: 0;
     gap: 20px;
 }
 
+/* 
+    Cursor is set to pointer when hovering over links.
+    Removed unline from the links.
+    Changed the color to slight darker brown.
+    Added transition effect for change in color.
+*/
 .header-links {
     cursor: pointer;
     text-decoration: none;
@@ -33,23 +59,43 @@ nav, #nav-links {
     transition: color 0.35s;
 }
 
+/* 
+    Change color to even darker brown when hovering over the links.
+*/
 .header-links:hover {
     color: rgb(66, 48, 14);
 }
 
+/* 
+    Does not display the checkbox
+*/
 #hamburger-checkbox {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
 }
 
+/* 
+    Does not display the hamburger icon by default.
+    Changed font weight to bold.
+    Changed color to a slight darker brown.
+*/
 #hamburger {
     display: none;
     font-weight: bold;
     color: rgb(105, 89, 64);
 }
 
+
+/* 
+    Media query for scrren size less than or equal to 768px (Mainly for phone).
+*/
 @media (max-width: 768px) {
+
+    /* 
+        Hides the navigation links by default.
+        Changes the direction of the links to column.
+        Positions the links below the navigation bar.
+        Adds background color, padding, border-radius and box-shadow for better visibility.
+    */
     #nav-links {
         display: none;
         flex-direction: column;
@@ -62,11 +108,21 @@ nav, #nav-links {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* 
+        Changed the font size to 18px.
+    */
     nav {
         font-size: 18px;
     }
 
+    /* 
+        Changed the display to block.
+        Changed the cursor to pointer.
+        Changed the font size to 24px.
+    */
     #hamburger {
         display: block;
+        cursor: pointer;
+        font-size: 24px;
     }
 }
