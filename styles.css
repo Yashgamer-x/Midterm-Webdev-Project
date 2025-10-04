@@ -90,11 +90,15 @@ main {
     padding: 20px;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 /* 
     Centers the heading text.
     Increases font size to 28px.
 */
-#about > h2 {
+section > h2 {
     font-size: 28px;
     text-align: center;
     margin-top: 0;
@@ -102,8 +106,8 @@ main {
 
 
 /* 
-    Using display flex
-    Gap is set to 20px
+    Using display flex.
+    Gap is set to 20px.
 */
 .about-content {
     display: flex;
@@ -111,9 +115,9 @@ main {
 }
 
 /* 
-    Width is set to 50% of parent
-    Font size is 24px
-    Text-align is justified
+    Width is set to 50% of parent.
+    Font size is 24px.
+    Text-align is justified.
 */
 .about-text {
     width: 50%;
@@ -122,9 +126,9 @@ main {
 }
 
 /* 
-    Image width is half of the parent minus 40 px for the gap
-    Border radius 10px
-    Added a box shadow
+    Image width is half of the parent minus 40 px for the gap.
+    Border radius 10px.
+    Added a box shadow.
 */
 .einstein-tongue-out-image {
     width: 50%;
@@ -134,6 +138,48 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* 
+    Made the display flex.
+    Centerize the flex content in center.
+*/
+.publication-files-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+    Display is set to flex.
+    Position is absolute so it does not consume space.
+    Calculated width.
+    Adds space between two buttons.
+    Translates down by 55px.
+*/
+.left-right-publication {
+    display: flex;
+    position: absolute;
+    width: calc(100% - 55px);
+    justify-content: space-between;
+    transform: translateY(55px);
+}
+
+/* 
+    Font size is set ot 20px.
+    Height is set to 730px.
+    Background color for the button has opactiy of 0.4 with slate grey color.
+*/
+.left-right-publication > button {
+    font-size: 20px;
+    height: 730px;
+    background-color: rgba(112, 128, 144,0.4);
+}
+
+
+/* 
+    Sets the display to none.
+*/
+.display-none {
+    display: none;
+}
 
 
 
@@ -176,5 +222,18 @@ main {
         display: block;
         cursor: pointer;
         font-size: 24px;
+    }
+
+    section > h2 {
+        font-size: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text, .einstein-tongue-out-image {
+        width: 100%;
+        font-size: 16px;
     }
 }
