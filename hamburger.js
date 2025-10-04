@@ -3,17 +3,20 @@
  * */ 
 let hamburgerCheckbox = document.getElementById("hamburger-checkbox");
 let navLinks = document.getElementById("nav-links");
+let navChildren = document.getElementsByClassName("header-links");
 
 
-/**
- * Event listener to toggle navigation links on hamburger menu clicks
- * */ 
-hamburgerCheckbox.addEventListener("change", function() {
-    if (this.checked) {
-        navLinks.style.display = "flex";
-    } else {
-        navLinks.style.display = "none";
-    }
+function toggleNavDisplay() {
+  navLinks.style.display = hamburgerCheckbox.checked ? "flex" : "none";
+}
+
+hamburgerCheckbox.addEventListener("change", toggleNavDisplay);
+
+Array.from(navChildren).forEach(link => {
+  link.addEventListener("click", () => {
+    hamburgerCheckbox.checked = false;
+    toggleNavDisplay();
+  });
 });
 
 /**

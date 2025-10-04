@@ -157,6 +157,7 @@ section > h2 {
 .left-right-publication {
     display: flex;
     position: absolute;
+    pointer-events: none;
     width: calc(100% - 55px);
     justify-content: space-between;
     transform: translateY(55px);
@@ -171,6 +172,7 @@ section > h2 {
     font-size: 20px;
     height: 730px;
     background-color: rgba(112, 128, 144,0.4);
+    pointer-events: auto;
 }
 
 
@@ -195,9 +197,52 @@ section > h2 {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    transition: color 0.3s;
 }
 
+.publication-files-links-container > a:hover {
+    color: rgb(230, 179, 120);
+}
 
+.swipe-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 12, 11);
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.swipe-gallery > img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    pointer-events: auto;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.image-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-indicator .bar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #555;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.image-indicator .bar.active {
+  background-color: #00bfff;
+  box-shadow: 0 0 10px #00bfff;
+}
 
 /* 
     Media query for scrren size less than or equal to 768px (Mainly for phone).
