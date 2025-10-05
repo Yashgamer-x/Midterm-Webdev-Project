@@ -14,8 +14,10 @@ hamburgerCheckbox.addEventListener("change", toggleNavDisplay);
 
 Array.from(navChildren).forEach(link => {
   link.addEventListener("click", () => {
-    hamburgerCheckbox.checked = false;
-    toggleNavDisplay();
+    if(navLinks.style.display && navLinks.style.display !== "none"){
+      hamburgerCheckbox.checked = false;
+      toggleNavDisplay();
+    }
   });
 });
 
