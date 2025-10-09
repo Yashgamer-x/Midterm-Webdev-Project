@@ -3,7 +3,7 @@
  * */ 
 let hamburgerCheckbox = document.getElementById("hamburger-checkbox");
 let navLinks = document.getElementById("nav-links");
-let navChildren = document.getElementsByClassName("header-links");
+let navChildren = document.querySelectorAll(".header-links");
 
 
 function toggleNavDisplay() {
@@ -12,7 +12,7 @@ function toggleNavDisplay() {
 
 hamburgerCheckbox.addEventListener("change", toggleNavDisplay);
 
-Array.from(navChildren).forEach(link => {
+navChildren.forEach( link => {
   link.addEventListener("click", () => {
     if(navLinks.style.display && navLinks.style.display !== "none"){
       hamburgerCheckbox.checked = false;
